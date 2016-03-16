@@ -8,6 +8,7 @@ bpwatch start opencv_install
 
 if [[ "$BUILD_WITH_OPENCV" ]]; then
   echo "Installing OpenCV"
+  apt-get install python-software-properties
   apt-add-repository --yes ppa:orangain/opencv
   apt-get update
   apt-get install -y python3-opencv
