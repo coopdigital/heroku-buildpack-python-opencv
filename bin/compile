@@ -213,6 +213,8 @@ source $BIN_DIR/steps/pip-install
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
 
+# OpenCV support
+sub-env $BIN_DIR/steps/opencv
 
 # Create .profile script for application runtime environment variables.
 set-env PATH '$HOME/.heroku/python/bin:$PATH'
@@ -267,4 +269,3 @@ if [[ ! "$DOCKER_BUILD" ]]; then
   bpwatch stop anvil_appdir_commit
   bpwatch stop compile
 fi
-

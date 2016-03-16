@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+PKG_CONFIG_PATH="/app/.heroku/vendor/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+source $BIN_DIR/utils
+
+bpwatch start opencv_install
+
+if [[ "$BUILD_WITH_OPENCV"]]; then
+  apt-add-repository --yes ppa:orangain/opencv
+  apt-get update
+  apt-get install -y python3-opencv
+fi
+
+bpwatch stop opencv_install
