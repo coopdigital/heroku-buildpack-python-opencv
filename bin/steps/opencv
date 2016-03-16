@@ -6,7 +6,7 @@ source $BIN_DIR/utils
 
 bpwatch start opencv_install
 
-if [[ "$BUILD_WITH_OPENCV"]]; then
+if [[ "$BUILD_WITH_OPENCV" ]]; then
   apt-add-repository --yes ppa:orangain/opencv
   apt-get update
   apt-get install -y python3-opencv
