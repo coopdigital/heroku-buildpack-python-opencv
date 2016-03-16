@@ -211,7 +211,7 @@ source $BIN_DIR/steps/gdal
 source $BIN_DIR/steps/pip-install
 
 # OpenCV support
-source $BIN_DIR/steps/opencv
+sub-env $BIN_DIR/steps/opencv
 
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
